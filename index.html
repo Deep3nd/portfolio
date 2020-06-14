@@ -42,7 +42,7 @@
 				-->
 				<hr />
 				<h2>Get in touch!</h2>
-				<form id="contact-form" method="post" netlify>
+				<form id="contact-form" method="post" netlify action="/">
 					<div class="fields">
 						<div class="field">
 							<input type="text" name="name" id="name" placeholder="Name" />
@@ -80,6 +80,14 @@
 			if ('addEventListener' in window) {
 				window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
 				document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+			}
+			function success() {
+				form.reset();
+				button.style = "display: none ";
+				status.innerHTML = "Thank you for reaching out!";
+			}
+			function error() {
+				status.innerHTML = "Oops! There was a problem.";
 			}
 		</script>
 	</body>
