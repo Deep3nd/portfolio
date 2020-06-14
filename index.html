@@ -1,11 +1,12 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 	<head>
 		<title>Houssam Sa</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
 		<link rel="stylesheet" href="assets/css/main.min.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<meta name="description" content="Houssam-Eddine SALHI's personal website.">
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -18,16 +19,19 @@
 					<p>Junior Full Stack Web Developer</p>
 				</header>
 				<hr />
-				<h2>Get in touch!</h2>
+				<h2>Get in touch</h2>
 				<form id="contact-form" method="post" netlify action="/">
 					<div class="fields">
 						<div class="field">
+							<label for="name" style="display: none;">Name</label>
 							<input type="text" name="name" id="name" placeholder="Name" />
 						</div>
 						<div class="field">
+							<label for="email" style="display: none;">Email</label>
 							<input type="email" name="email" id="email" placeholder="Email" />
 						</div>
 						<div class="field">
+							<label for="message" style="display: none;">Message</label>
 							<textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
 						</div>
 					</div>
@@ -64,7 +68,7 @@
 				var status = document.getElementById("contact-form-status");
 				function success() {
 					form.reset();
-					button.style = "display: none ";
+					button.style = "display: none;";
 					status.innerHTML = "Thank you for reaching out!";
 				}
 				function error() {
